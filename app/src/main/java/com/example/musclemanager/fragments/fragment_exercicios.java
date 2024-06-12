@@ -4,7 +4,9 @@ import static android.content.ContentValues.TAG;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,6 +20,10 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -28,6 +34,8 @@ import com.example.musclemanager.Treino;
 import com.example.musclemanager.exercicio;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -68,6 +76,7 @@ public class fragment_exercicios extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+    private BottomSheetDialog dialog;
 
     String nome;
     String descricao;
@@ -76,6 +85,39 @@ public class fragment_exercicios extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_exercicios, container, false);
+
+
+        FloatingActionButton FloatingButton = view.findViewById(R.id.floatingbutton);
+
+        dialog = new BottomSheetDialog(requireContext(),R.style.MyTransparentBottomSheetDialogTheme);
+        View view2 = getLayoutInflater().inflate(R.layout.bottom_sheet_event, null, false);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(view2);
+        Button bt_submit = view2.findViewById(R.id.submitevent);
+        Button sendImage = view2.findViewById(R.id.sendImage);
+//        sendDate = view.findViewById(R.id.sendDate);
+        EditText tituloText=view2.findViewById(R.id.Titulo);
+        EditText descricaoText=view2.findViewById(R.id.Descricao);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        // Configurando animação de entrada do BottomSheetDialog
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+
+
+
+
+
+
+
+        FloatingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //deixa transparente para que só possa se ver o background
+                dialog.show();
+            }
+        });
+        dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         CollectionReference treinosRef = db.collection("treinos");
