@@ -90,7 +90,7 @@ public class fragment_exercicios extends Fragment {
         FloatingActionButton FloatingButton = view.findViewById(R.id.floatingbutton);
 
         dialog = new BottomSheetDialog(requireContext(),R.style.MyTransparentBottomSheetDialogTheme);
-        View view2 = getLayoutInflater().inflate(R.layout.bottom_sheet_event, null, false);
+        View view2 = getLayoutInflater().inflate(R.layout.bottom_sheet_treino, null, false);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(view2);
         Button bt_submit = view2.findViewById(R.id.submitevent);
