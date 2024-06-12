@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/orange"
+        android:text="Criar Exercicio" />
+
+    <EditText
+        android:id="@+id/Titulo"
+        style="@style/edit_Text"
+        android:textStyle="bold"
+
+        android:hint="Titulo"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <EditText
+        android:id="@+id/Descricao"
+        style="@style/edit_Text"
+        android:textStyle="bold"
+
+        android:hint="Descrição"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_height="150dp"
+        />
+
+
+        <Button
+            android:id="@+id/sendImage"
+            android:layout_marginTop="20dp"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+
+            android:layout_marginLeft="20dp"
+            android:text="Imagem"
+            android:background="@drawable/noborda"
+            android:backgroundTint="@color/orange"
+            android:textSize="24sp"/>
+
+
+
+
+
+
+    <Button
+        android:id="@+id/submitevent"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+
+        android:text="Enviar"
+        android:backgroundTint="@color/orange"
+        android:textSize="20dp"
+        android:layout_marginLeft="35dp"
+         />
+
+
+</LinearLayout>

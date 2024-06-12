@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.musclemanager.Login">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="200dp"
+        android:src="@drawable/gym"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/mm"
+
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Muscle Manager"
+        android:textStyle="bold"
+        android:textColor="@color/orange"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="140dp"
+        android:layout_marginStart="38dp"
+        android:textSize="25dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLogin"
+
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        android:background="@drawable/backgroundconstraintlogin"
+        android:backgroundTint="@color/black">
+
+    <EditText
+        android:id="@+id/emailEdit"
+
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:hint="  Email"
+        android:drawableEnd="@drawable/ic_email"
+        android:paddingEnd="9dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/backgroundeditlogin"
+        />
+
+    <EditText
+        android:id="@+id/senhaEdit"
+
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+
+        app:layout_constraintTop_toBottomOf="@id/emailEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:hint="  Senha"
+        android:drawableEnd="@drawable/ic_eye"
+        android:paddingEnd="9dp"
+        android:inputType="textPassword"
+        android:autofillHints="password"
+        android:background="@drawable/backgroundeditlogin"
+        />
+
+        <Button
+            android:id="@+id/butLogin"
+
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+
+            android:text="Entrar"
+            android:textSize="20dp"
+            app:layout_constraintTop_toBottomOf="@id/senhaEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/backgroundeditlogin"
+            android:backgroundTint="@color/orange"/>
+
+        <Button
+            android:id="@+id/butCriarconta"
+
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/butLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+
+            android:text="Criar conta"
+            android:textColor="@color/orange"
+            android:textSize="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

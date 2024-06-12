@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "84017169834",
+    "project_id": "musclemanager-7d1c9",
+    "storage_bucket": "musclemanager-7d1c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84017169834:android:1f7a2a332f9a9b6ea497d3",
+        "android_client_info": {
+          "package_name": "com.example.musclemanager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYliRZjgEJhS0gWsv-IGG2jmKmvF6BTgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:84017169834:android:7a30bf53de222e36a497d3",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYliRZjgEJhS0gWsv-IGG2jmKmvF6BTgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

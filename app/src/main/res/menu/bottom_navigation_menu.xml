@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fragment_home"
+        android:title="Menu"
+        android:icon="@drawable/house" />
+    <item
+        android:id="@+id/fragment_treino"
+        android:title="Exercicios"
+        android:icon="@drawable/exercise" />
+    <item
+        android:id="@+id/fragment_exercicios"
+        android:title="Treino"
+        android:icon="@drawable/train" />
+</menu>
