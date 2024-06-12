@@ -53,12 +53,24 @@
         android:layout_marginStart="38dp"
         android:textSize="25dp"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@id/constraint"
             android:layout_width="match_parent"
+
             android:layout_height="match_parent">
 
 
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/sair"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroundconstraintlogin"
+            android:backgroundTint="@color/orange"
+            android:text="Sair"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+             />
+    </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.musclemanager.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.musclemanager.Login;
 import com.example.musclemanager.MainActivity;
 import com.example.musclemanager.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -79,6 +81,15 @@ public class fragment_home extends Fragment {
         EditText welcome=view.findViewById(R.id.welcome);
         String a="Bem Vindo\n" + nomeUsuario;
         welcome.setText(a);
+
+        Button sair = view.findViewById(R.id.sair);
+        sair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getContext(), Login.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
 
